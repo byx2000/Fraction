@@ -1,0 +1,520 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     18120,        512]
+NotebookOptionsPosition[     17862,        498]
+NotebookOutlinePosition[     18219,        514]
+CellTagsIndexPosition[     18176,        511]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"range", "=", "100000000000000000000000"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"times", "=", "1000"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", "\:52a0\:6cd5\:6d4b\:8bd5", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"str", "=", " ", 
+   RowBox[{
+   "OpenWrite", "[", 
+    "\"\<E:\\\\Programs\\\\vs\\\\RationalNumber\\\\RationalNumber\\\\add.txt\>\
+\"", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "1"}], ";", 
+  RowBox[{"While", "[", 
+   RowBox[{
+    RowBox[{"i", "\[LessEqual]", "times"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"a", "=", 
+      RowBox[{"RandomInteger", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"b", "=", 
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}], ")"}], "==",
+         "0"}], ",", 
+       RowBox[{"b", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}]}], "]"}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"c", "=", 
+      RowBox[{"RandomInteger", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"d", "=", 
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}], ")"}], "==",
+         "0"}], ",", 
+       RowBox[{"d", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}]}], "]"}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"r", "=", 
+      RowBox[{
+       RowBox[{"a", "/", "b"}], "+", 
+       RowBox[{"c", "/", "d"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"WriteString", "[", 
+      RowBox[{"str", ",", 
+       RowBox[{
+        RowBox[{"ToString", "[", "a", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", "b", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", "c", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", "d", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", " ", 
+         RowBox[{"Numerator", "[", "r", "]"}], "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"Denominator", "[", "r", "]"}], "]"}], "<>", 
+        "\"\<\\n\>\""}]}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"i", "++"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Close", "[", "str", "]"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", "\:51cf\:6cd5\:6d4b\:8bd5", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"str", "=", " ", 
+   RowBox[{
+   "OpenWrite", "[", 
+    "\"\<E:\\\\Programs\\\\vs\\\\RationalNumber\\\\RationalNumber\\\\sub.txt\>\
+\"", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "1"}], ";", 
+  RowBox[{"While", "[", 
+   RowBox[{
+    RowBox[{"i", "\[LessEqual]", "times"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"a", "=", 
+      RowBox[{"RandomInteger", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"b", "=", 
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}], ")"}], "==",
+         "0"}], ",", 
+       RowBox[{"b", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}]}], "]"}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"c", "=", 
+      RowBox[{"RandomInteger", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"d", "=", 
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}], ")"}], "==",
+         "0"}], ",", 
+       RowBox[{"d", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}]}], "]"}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"r", "=", 
+      RowBox[{
+       RowBox[{"a", "/", "b"}], "-", 
+       RowBox[{"c", "/", "d"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"WriteString", "[", 
+      RowBox[{"str", ",", 
+       RowBox[{
+        RowBox[{"ToString", "[", "a", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", "b", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", "c", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", "d", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", " ", 
+         RowBox[{"Numerator", "[", "r", "]"}], "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"Denominator", "[", "r", "]"}], "]"}], "<>", 
+        "\"\<\\n\>\""}]}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"i", "++"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Close", "[", "str", "]"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", "\:4e58\:6cd5\:6d4b\:8bd5", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"str", "=", " ", 
+   RowBox[{
+   "OpenWrite", "[", 
+    "\"\<E:\\\\Programs\\\\vs\\\\RationalNumber\\\\RationalNumber\\\\mul.txt\>\
+\"", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "1"}], ";", 
+  RowBox[{"While", "[", 
+   RowBox[{
+    RowBox[{"i", "\[LessEqual]", "times"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"a", "=", 
+      RowBox[{"RandomInteger", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"b", "=", 
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}], ")"}], "==",
+         "0"}], ",", 
+       RowBox[{"b", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}]}], "]"}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"c", "=", 
+      RowBox[{"RandomInteger", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"d", "=", 
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}], ")"}], "==",
+         "0"}], ",", 
+       RowBox[{"d", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}]}], "]"}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"r", "=", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"a", "/", "b"}], ")"}], "*", 
+       RowBox[{"(", 
+        RowBox[{"c", "/", "d"}], ")"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"WriteString", "[", 
+      RowBox[{"str", ",", 
+       RowBox[{
+        RowBox[{"ToString", "[", "a", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", "b", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", "c", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", "d", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", " ", 
+         RowBox[{"Numerator", "[", "r", "]"}], "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"Denominator", "[", "r", "]"}], "]"}], "<>", 
+        "\"\<\\n\>\""}]}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"i", "++"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Close", "[", "str", "]"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", "\:9664\:6cd5\:6d4b\:8bd5", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"str", "=", " ", 
+   RowBox[{
+   "OpenWrite", "[", 
+    "\"\<E:\\\\Programs\\\\vs\\\\RationalNumber\\\\RationalNumber\\\\div.txt\>\
+\"", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "1"}], ";", 
+  RowBox[{"While", "[", 
+   RowBox[{
+    RowBox[{"i", "\[LessEqual]", "times"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"a", "=", 
+      RowBox[{"RandomInteger", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"b", "=", 
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}], ")"}], "==",
+         "0"}], ",", 
+       RowBox[{"b", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}]}], "]"}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"c", "=", 
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}], ")"}], "==",
+         "0"}], ",", 
+       RowBox[{"c", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}]}], "]"}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"d", "=", 
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}], ")"}], "==",
+         "0"}], ",", 
+       RowBox[{"d", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}]}], "]"}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"r", "=", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"a", "/", "b"}], ")"}], "/", 
+       RowBox[{"(", 
+        RowBox[{"c", "/", "d"}], ")"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"WriteString", "[", 
+      RowBox[{"str", ",", 
+       RowBox[{
+        RowBox[{"ToString", "[", "a", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", "b", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", "c", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", "d", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", " ", 
+         RowBox[{"Numerator", "[", "r", "]"}], "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"Denominator", "[", "r", "]"}], "]"}], "<>", 
+        "\"\<\\n\>\""}]}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"i", "++"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Close", "[", "str", "]"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", "\:6c42\:5e42\:6d4b\:8bd5", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"str", "=", " ", 
+   RowBox[{
+   "OpenWrite", "[", 
+    "\"\<E:\\\\Programs\\\\vs\\\\RationalNumber\\\\RationalNumber\\\\pow.txt\>\
+\"", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "1"}], ";", 
+  RowBox[{"While", "[", 
+   RowBox[{
+    RowBox[{"i", "\[LessEqual]", "times"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"a", "=", 
+      RowBox[{"RandomInteger", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "200"}], ",", "200"}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"b", "=", 
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "200"}], ",", "200"}], "}"}], "]"}]}], ")"}], "==", 
+        "0"}], ",", 
+       RowBox[{"b", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "200"}], ",", "200"}], "}"}], "]"}]}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"c", "=", 
+      RowBox[{"RandomInteger", "[", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "200"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"r", "=", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"a", "/", "b"}], ")"}], "^", "c"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"WriteString", "[", 
+      RowBox[{"str", ",", 
+       RowBox[{
+        RowBox[{"ToString", "[", "a", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", "b", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", "c", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", " ", 
+         RowBox[{"Numerator", "[", "r", "]"}], "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"Denominator", "[", "r", "]"}], "]"}], "<>", 
+        "\"\<\\n\>\""}]}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"i", "++"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Close", "[", "str", "]"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{
+  "(*", "\:6709\:7406\:5316\:6d4b\:8bd5", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"str", "=", " ", 
+   RowBox[{
+   "OpenWrite", "[", 
+    "\"\<E:\\\\Programs\\\\vs\\\\RationalNumber\\\\RationalNumber\\\\rat.txt\>\
+\"", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "1"}], ";", 
+  RowBox[{"While", "[", 
+   RowBox[{
+    RowBox[{"i", "\[LessEqual]", "times"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"a", "=", 
+      RowBox[{"N", "[", 
+       RowBox[{"Round", "[", 
+        RowBox[{
+         RowBox[{"RandomReal", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}], ",", 
+         RowBox[{"1", "/", "100000"}]}], "]"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"r", "=", 
+      RowBox[{"Rationalize", "[", 
+       RowBox[{"a", ",", " ", "0"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"WriteString", "[", 
+      RowBox[{"str", ",", 
+       RowBox[{
+        RowBox[{"ToString", "[", "a", "]"}], "<>", "\"\< \>\"", " ", "<>", 
+        RowBox[{"ToString", "[", " ", 
+         RowBox[{"Numerator", "[", "r", "]"}], "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"Denominator", "[", "r", "]"}], "]"}], "<>", 
+        "\"\<\\n\>\""}]}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"i", "++"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Close", "[", "str", "]"}], ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+  "(*", "\:6784\:9020\:51fd\:6570\:6d4b\:8bd5", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"str", "=", " ", 
+   RowBox[{
+   "OpenWrite", "[", 
+    "\"\<E:\\\\Programs\\\\vs\\\\RationalNumber\\\\RationalNumber\\\\cof.txt\>\
+\"", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "1"}], ";", 
+  RowBox[{"While", "[", 
+   RowBox[{
+    RowBox[{"i", "\[LessEqual]", "times"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"a", "=", 
+      RowBox[{"RandomInteger", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"b", "=", 
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}], ")"}], "==",
+         "0"}], ",", 
+       RowBox[{"b", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "range"}], ",", "range"}], "}"}], "]"}]}]}], "]"}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"WriteString", "[", 
+      RowBox[{"str", ",", 
+       RowBox[{
+        RowBox[{"ToString", "[", "a", "]"}], "<>", "\"\</\>\"", "<>", 
+        RowBox[{"ToString", "[", "b", "]"}], "<>", "\"\< \>\"", " ", "<>", 
+        RowBox[{"ToString", "[", "a", "]"}], "<>", "\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", "b", "]"}], "<>", "\"\<\\n\>\""}]}], "]"}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"i", "++"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Close", "[", "str", "]"}], ";"}]}], "Input"]
+},
+WindowSize->{1920, 977},
+WindowMargins->{{-9, Automatic}, {Automatic, -9}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (2016\:5e7410\:67088\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 17300, 476, 3230, "Input"]
+}
+]
+*)
+

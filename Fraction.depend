@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1544621905 source:c:\users\byx\desktop\fraction\main.cpp
+	<iostream>
+	"BoundaryTest.h"
+	"UnitTest.h"
+	"Fraction.h"
+
+1544577288 c:\users\byx\desktop\fraction\fraction.h
+	"BigInt.h"
+
+1544576463 c:\users\byx\desktop\fraction\bigint.h
+	<iostream>
+	<vector>
+	<string>
+	<algorithm>
+	<cmath>
+	<cassert>
+
+1544621709 source:c:\users\byx\desktop\fraction\unittest.cpp
+	<iostream>
+	<fstream>
+	"Fraction.h"
+
+1544621787 c:\users\byx\desktop\fraction\boundarytest.h
+	<cassert>
+	"Fraction.h"
+
+1544621814 c:\users\byx\desktop\fraction\unittest.h
+	<iostream>
+	<fstream>
+	"Fraction.h"
+
