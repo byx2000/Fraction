@@ -7,18 +7,21 @@ using namespace std;
 
 int main()
 {
-    //边界条件测试
+    /*边界条件测试*/
     BoundaryTest();
 
-    //单元测试
-    TestCon();
+    /*单元测试*/
+
+    //去掉以下注释可运行单元测试
+    //单元测试可能需要较长时间，请耐心等待
+    /*TestCon();
     TestAdd();
     TestSub();
     TestMul();
     TestDiv();
-    TestPow();
+    TestPow();*/
 
-    //用法示例
+    /*用法示例*/
 
     //构造函数和赋值
     Fraction f1(1, 2); //1/2
@@ -58,7 +61,7 @@ int main()
     cout << (Fraction(1, 2) /= Fraction(1, 3)) << endl;
     cout << (Fraction(3, 5) ^= BigInt(100)) << endl;
 
-    //应用示例
+    /*应用示例*/
 
     //求1+1/2+1/3+...+1/500
     Fraction res(0);
