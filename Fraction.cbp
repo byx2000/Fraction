@@ -32,8 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="BigInt.cpp" />
 		<Unit filename="BigInt.h" />
 		<Unit filename="BoundaryTest.h" />
+		<Unit filename="Fraction.cpp" />
 		<Unit filename="Fraction.h" />
 		<Unit filename="UnitTest.h" />
 		<Unit filename="main.cpp" />

@@ -1,13 +1,13 @@
 #include <cassert>
 #include "Fraction.h"
 
-//±ß½çÌõ¼þ²âÊÔ
+//è¾¹ç•Œæµ‹è¯•
 void BoundaryTest()
 {
-    assert(Fraction(0, 1).toString() == "0" && Fraction(0, 1).sign == 1);
-	assert(Fraction(0, 2).toString() == "0" && Fraction(0, 2).sign == 1);
-	assert(Fraction(0, -1).toString() == "0" && Fraction(0, -1).sign == 1);
-	assert(Fraction(0, -2).toString() == "0" && Fraction(0, -2).sign == 1);
+    assert(Fraction(0, 1).toString() == "0" && Fraction(0, 1).getSign() == 1);
+	assert(Fraction(0, 2).toString() == "0" && Fraction(0, 2).getSign() == 1);
+	assert(Fraction(0, -1).toString() == "0" && Fraction(0, -1).getSign() == 1);
+	assert(Fraction(0, -2).toString() == "0" && Fraction(0, -2).getSign() == 1);
 	assert(Fraction(1, 1).toString() == "1");
 	assert(Fraction(-1, 1).toString() == "-1");
 	assert(Fraction(1, -1).toString() == "-1");

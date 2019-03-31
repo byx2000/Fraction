@@ -14,12 +14,12 @@ int main()
 
     //去掉以下注释可运行单元测试
     //单元测试可能需要较长时间，请耐心等待
-    /*TestCon();
+    TestCon();
     TestAdd();
     TestSub();
     TestMul();
     TestDiv();
-    TestPow();*/
+    TestPow();
 
     /*用法示例*/
 
